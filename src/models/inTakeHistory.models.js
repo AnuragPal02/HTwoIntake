@@ -1,17 +1,19 @@
-
 import mongoose, { Schema } from "mongoose";
 
 const inTakeHistorySchema = new Schema(
-    {
-       waterIntake:{
-        type: Number,
-        required: true
-       },
-       time:{
-        type: Date,
-        required: true,
-       }
-    },{timestamps: true}
-)
+  {
+    waterIntake: {
+      type: Number,
+      required: true,
+    },
+    time: {
+      type: Date,
+      required: true,
+      default: Date.now, // Default to current timestamp
+    },
+  },
+  { timestamps: true }
+);
 
-export const inTakeHistory = mongoose.model('inTakeHistory',inTakeHistorySchema);
+// Export as a schema for embedding in other schemas
+export const inTakeHistory = inTakeHistorySchema;
