@@ -5,12 +5,12 @@ import bcrypt from "bcrypt";
 
 const userSchema = new Schema(
   {
-    fullName: {
-      type: String,
-      required: true,
-      trim: true,
-      lowercase: true,
-    },
+    // fullName: {
+    //   type: String,
+    //   required: true,
+    //   trim: true,
+    //   lowercase: true,
+    // },
     username: {
       type: String,
       unique: true,
@@ -30,10 +30,10 @@ const userSchema = new Schema(
       type: Number,
       required: true,
     },
-    Avatar: {
-      type: String,
-      default: "default-avatar-url", // Replace with an actual default URL
-    },
+    // Avatar: {
+    //   type: String,
+    //   default: "default-avatar-url", // Replace with an actual default URL
+    // },
     waterIntake: {
       type: Number,
       default: 2000,
